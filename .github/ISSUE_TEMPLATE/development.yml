@@ -24,4 +24,4 @@ body:
   - type: markdown
     id: sidenote
     attributes:
-      label: 補足
+      value: "# 補足"

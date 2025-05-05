@@ -37,8 +37,8 @@ body:
     id: cause
     attributes:
       label: 原因
-      descriptio: 原因がわかっている場合は記述してください。
+      description: 原因がわかっている場合は記述してください。
   - type: markdown
     id: sidenote
     attributes:
-      label: 補足
+      value: "# 補足"

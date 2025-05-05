@@ -38,7 +38,7 @@ body:
     attributes:
       label: 原因
       description: 原因がわかっている場合は記述してください。
-  - type: markdown
+  - type: textarea
     id: sidenote
     attributes:
-      value: "# 補足"
+      label: 補足

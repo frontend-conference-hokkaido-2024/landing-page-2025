@@ -23,7 +23,7 @@ body:
       options: ["high", "medium", "low", "-" ]
     validations:
       required: true
-  - type: markdown
+  - type: textarea
     id: sidenote
     attributes:
-      value: "# 補足"
+      label: 補足

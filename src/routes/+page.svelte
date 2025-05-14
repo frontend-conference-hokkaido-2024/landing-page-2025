@@ -15,8 +15,15 @@
 	<div>
 		<a href="https://x.com/fec_hokkaido" class="underline pr-3">X</a>
 		<a href="https://note.com/fec_hokkaido/m/m88550dbf59dd" class="underline">note</a>
+		<iframe
+			class="note-embed"
+			src="https://note.com/embed/notes/n9cdc94494e1e"
+			style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;"
+			height="400"
+			title="noteの埋め込みコンテンツ"
+		></iframe><script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
 	</div>
-	<div class="py-6">
+	<div class="pb-6">
 		<a
 			href="https://esa-pages.io/p/sharing/22435/posts/13/3a8f7d0dddaeb2ea656e.html"
 			class="underline pr-3">行動規範</a

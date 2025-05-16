@@ -59,15 +59,10 @@
 
 	<div class="my-6">
 		<h2 class="font-bold mb-4">最新の投稿</h2>
-		<ul class="space-y-2">
+		<ul class="space-y-2 list-disc pl-5">
 			{#each posts as post}
 				<li>
-					<a
-						href={post.link}
-						class="text-blue-600 underline"
-						target="_blank"
-						rel="noreferrer"
-					>
+					<a href={post.link} class="underline" target="_blank" rel="noreferrer">
 						{post.title}
 					</a>
 				</li>

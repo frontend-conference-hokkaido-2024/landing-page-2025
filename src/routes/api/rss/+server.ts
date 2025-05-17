@@ -12,6 +12,6 @@ export const GET: RequestHandler = async () => {
 		});
 	} catch (error) {
 		console.error('RSSフィードの取得に失敗しました:', error);
-		return json({ error: 'RSSフィードの取得に失敗しました' }, { status: 500 });
+		return json({ error: 'RSSフィードの取得に失敗しました' }, { status: 502 });
 	}
 };

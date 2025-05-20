@@ -1,6 +1,8 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
+export const prerender = true;
+
 export const GET: RequestHandler = async () => {
 	try {
 		const response = await fetch('https://note.com/fec_hokkaido/m/m88550dbf59dd/rss');

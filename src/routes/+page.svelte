@@ -1,39 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	interface Post {
-		title: string;
-		link: string;
-	}
-
-	let posts: Post[] = [];
-
-	async function fetchRSS() {
-		try {
-			const response = await fetch('/api/rss');
-			const text = await response.text();
-			console.log(text);
-			const parser = new DOMParser();
-			const xmlDoc = parser.parseFromString(text, 'text/xml');
-			const items = xmlDoc.getElementsByTagName('item');
-
-			posts = Array.from(items)
-				.map((item) => {
-					const title = item.getElementsByTagName('title')[0]?.textContent;
-					const link = item.getElementsByTagName('link')[0]?.textContent;
-					if (title && link) {
-						return { title, link };
-					}
-					return null;
-				})
-				.filter((post): post is Post => post !== null);
-		} catch (error) {
-			console.error('RSSフィードの取得に失敗しました:', error);
-		}
-	}
-	onMount(() => {
-		fetchRSS();
-	});
+	let note = $props();
 </script>
 
 <svelte:head>
@@ -60,13 +28,15 @@
 	<div class="my-6">
 		<h2 class="font-bold mb-4">最新の投稿</h2>
 		<ul class="space-y-2 list-disc pl-5">
-			{#each posts as post}
-				<li>
-					<a href={post.link} class="underline" target="_blank" rel="noreferrer">
-						{post.title}
-					</a>
-				</li>
-			{/each}
+			<!-- {#if note.data.articles != null} -->
+				{#each note.data.articles as article}
+					<li>
+						<a href={article.link} class="underline" target="_blank" rel="noreferrer">
+							{article.title}
+						</a>
+					</li>
+				{/each}
+			<!-- {/if} -->
 		</ul>
 	</div>
 
